@@ -1,7 +1,7 @@
 package modelo;
 
 public abstract class Entidade {
-	private int id;
+	protected int id;
 	
 	public Entidade(int id) {
 		this.id = id;

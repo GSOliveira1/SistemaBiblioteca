@@ -1,11 +1,17 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public class Estudante extends Entidade {
 	private String nome;
+	private int matricula;
+	private ArrayList<Aluguel> alugueis;
 	
-	public Estudante(String nome, int id) {
-		super(id);
+	public Estudante(String nome, int matricula) {
+		super(matricula);
 		this.nome = nome;
+		this.matricula = matricula;
+		this.alugueis = new ArrayList<>();
 	}
 
 	public String getNome() {
@@ -14,6 +20,18 @@ public class Estudante extends Entidade {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public int getMatricula() {
+		return matricula;
+	}
+	
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
+	}
+	
+	public ArrayList<Aluguel> getAlugueis(){
+		return alugueis;
 	}
 	
 	@Override
