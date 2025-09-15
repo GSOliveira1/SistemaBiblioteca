@@ -9,12 +9,11 @@ public class Aluguel extends Entidade {
 	private ArrayList<ItemAluguel> itens;
 	
 	
-	public Aluguel(int id, LocalDate dataAluguel, Estudante estudante) {
+	public Aluguel(int id, Estudante estudante) {
 		super(id);
-		this.dataAluguel = dataAluguel;
+		this.dataAluguel = LocalDate.now();
 		this.estudante = estudante;
 		itens = new ArrayList<>();
-		dataAluguel = LocalDate.now();
 	}
 
 	public LocalDate getDataAluguel() {

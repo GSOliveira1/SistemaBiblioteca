@@ -33,10 +33,14 @@ public class Estudante extends Entidade {
 	public ArrayList<Aluguel> getAlugueis(){
 		return alugueis;
 	}
-	
+
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return "Estudante [nome=" + nome + 
+				", matricula=" + matricula + 
+				", alugueis=" + alugueis + 
+				", id=" + id + "]";
 	}
+	
+	
 }
