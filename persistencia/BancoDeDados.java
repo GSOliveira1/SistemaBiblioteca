@@ -7,7 +7,9 @@ public class BancoDeDados {
 	private Persistente alugueis;
 
 	public BancoDeDados() {
-		
+		estudantes = new Persistente();
+		livros = new Persistente();
+		alugueis = new Persistente();
 	}
 
 	public Persistente getEstudantes() {

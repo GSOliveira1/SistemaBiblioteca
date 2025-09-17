@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import persistencia.BancoDeDados;
 import persistencia.IDInvalido;
@@ -15,31 +14,34 @@ public class Program {
 		System.out.println("2- Gerenciar Livros");
 		System.out.println("3- Gerenciar Alugueis");
 		System.out.println("4- Fechar Programa");
+		int opcao = sc.nextInt();
 		
-		try {
-			int opcao = sc.nextInt();
-			switch(opcao) {
-			case 1:
-				MenuEstudante.menuEstudantes(sc, bd);
-				break;
-			case 2:
-				//menuLivros(sc, bd);
-				break;
-			case 3:
-				//menuAlugueis(sc, bd);
-				break;
-			case 4:
-				System.out.println("Encerrando o programa.");
-				sc.close();
-				System.exit(0);
-				break;
+		while (opcao != 4) {
+			try {
+				switch(opcao) {
+				case 1:
+					MenuEstudante.menuEstudantes(sc, bd);
+					break;
+				case 2:
+					//menuLivros(sc, bd);
+					break;
+				case 3:
+					//menuAlugueis(sc, bd);
+					break;
+				case 4:
+					System.out.println("Encerrando o programa.");
+					sc.close();
+					System.exit(0);
+					break;
+				default:
+					System.out.println("Opcao invalida.");
+					break;
+				}
+			} catch (IDInvalido e) {
+				System.out.println("Erro: ID invalido.");
+				sc.nextLine();
 			}
-		} catch (InputMismatchException e) {
-			System.out.println("Erro: digite um numero para escolher uma opcao.");
-			sc.nextLine();
-		} catch (IDInvalido e2) {
-			System.out.println("Erro: id invalido");
-		}
+		}	
 
 	}
 
