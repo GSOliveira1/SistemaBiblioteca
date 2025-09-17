@@ -48,7 +48,13 @@ public class Persistente {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		StringBuilder sb = new StringBuilder();
+		if (entidades.isEmpty()) {
+			return "Nenhuma entidade.";
+		}
+		for (Entidade entidade : entidades) {
+			sb.append(entidade.toString()).append("\n");
+		}
+		return sb.toString();
 	}
 }

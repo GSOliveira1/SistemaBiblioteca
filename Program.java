@@ -1,7 +1,8 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import persistencia.BancoDeDados;
-import visao.MenuEstudante;
+import persistencia.IDInvalido;
+import visao.*;
 
 public class Program {
 
@@ -14,7 +15,6 @@ public class Program {
 		System.out.println("2- Gerenciar Livros");
 		System.out.println("3- Gerenciar Alugueis");
 		System.out.println("4- Fechar Programa");
-		System.out.println("O que deseja fazer? ");
 		
 		try {
 			int opcao = sc.nextInt();
@@ -37,6 +37,8 @@ public class Program {
 		} catch (InputMismatchException e) {
 			System.out.println("Erro: digite um numero para escolher uma opcao.");
 			sc.nextLine();
+		} catch (IDInvalido e2) {
+			System.out.println("Erro: id invalido");
 		}
 
 	}
