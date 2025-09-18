@@ -1,6 +1,6 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import persistencia.BancoDeDados;
-import persistencia.IDInvalido;
 import visao.*;
 
 public class Program {
@@ -37,9 +37,8 @@ public class Program {
 					System.out.println("Opcao invalida.");
 					break;
 				}
-			} catch (IDInvalido e) {
-				System.out.println("Erro: ID invalido.");
-				sc.nextLine();
+			} catch (InputMismatchException e) {
+				System.out.println("Erro: input invalido. Tente novamente.");
 			}
 		}	
 

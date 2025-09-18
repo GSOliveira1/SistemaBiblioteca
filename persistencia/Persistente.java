@@ -15,7 +15,7 @@ public class Persistente {
 		this.entidades.add(e);
 	}
 	
-	public void remover(int id)  throws IDInvalido{
+	public void remover(int id)  throws IDInvalido {
 		Entidade aux = buscarPorID(id);
 		int indiceRemocao = entidades.indexOf(aux);
 		if (indiceRemocao == -1) {	// Entity not found.
@@ -43,7 +43,7 @@ public class Persistente {
 				return aux;
 			}
 		}
-		return null;
+		throw new IDInvalido();
 	}
 	
 	@Override
