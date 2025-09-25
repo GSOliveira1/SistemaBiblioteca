@@ -49,6 +49,26 @@ public class MenuLivro {
 				}
 			case 3:
 				break;
+			case 4:
+				try {
+					System.out.println("Informe o ID do Livro: ");
+					int idBusca = sc.nextInt();
+					System.out.println(bd.getLivros().buscarPorID(idBusca));
+					break;
+				} catch (IDInvalido e) {
+					System.out.println("Erro: id invalido.");
+					break;
+				}
+			case 5:
+				System.out.println("Lista de Livros: ");
+				System.out.println(bd.getLivros().toString());
+				break;
+			case 0:
+				System.out.println("Voltando ao menu principal.");
+				break;
+			default:
+				System.out.println("Opcao invalida");
+				break;
 			}
 		} while (opcao != 0);
 	}
