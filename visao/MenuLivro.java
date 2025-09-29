@@ -48,7 +48,24 @@ public class MenuLivro {
 					break;
 				}
 			case 3:
-				break;
+				try {
+					System.out.println("Informe o ID do Livro a ser alterado: ");
+					int idAltera = sc.nextInt();
+					Livro livroParaAlterar = (Livro) bd.getLivros().buscarPorID(idAltera);
+					System.out.println("Novo nome: ");
+					String novoNome = sc.nextLine();
+					if (!novoNome.trim().isEmpty()) {
+						livroParaAlterar.setNome(novoNome);
+					}
+					System.out.println("Novo autor");
+					String novoAutor = sc.nextLine();
+					if (!novoAutor.trim().isEmpty()) {
+						livroParaAlterar.setAutor(novoAutor);
+					}
+					break;
+				} catch (IDInvalido e) {
+					System.out.println("Erro: Id invalido.");
+				}
 			case 4:
 				try {
 					System.out.println("Informe o ID do Livro: ");

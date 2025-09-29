@@ -50,13 +50,19 @@ public class MenuEstudante {
 				try {
 					System.out.println("Informe o ID do Estudante a ser alterado: ");
 					int idAltera = sc.nextInt();
+					Estudante estudanteParaAlterar = (Estudante) bd.getEstudantes().buscarPorID(idAltera);
 					System.out.println("Informe os novos dados: ");
 					System.out.println("Nome: ");
 					String novoNome = sc.nextLine();
+					if (!novoNome.trim().isEmpty()) {
+						estudanteParaAlterar.setNome(novoNome);
+					}
 					System.out.println("Matricula: ");
 					int novaMatricula = sc.nextInt();
-					Estudante novoEstudante = new Estudante(novoNome, novaMatricula);
-					bd.getEstudantes().alterar(idAltera, novoEstudante);
+					if (novaMatricula != estudanteParaAlterar.getMatricula()) {
+						estudanteParaAlterar.setMatricula(novaMatricula);
+						estudanteParaAlterar.setId(novaMatricula);
+					}
 					break;	
 				} catch(IDInvalido e) {
 					System.out.println("Erro: id invalido.");
