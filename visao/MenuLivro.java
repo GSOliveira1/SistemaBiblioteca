@@ -51,16 +51,22 @@ public class MenuLivro {
 				try {
 					System.out.println("Informe o ID do Livro a ser alterado: ");
 					int idAltera = sc.nextInt();
+					sc.nextLine();
+					
 					Livro livroParaAlterar = (Livro) bd.getLivros().buscarPorID(idAltera);
+					
 					System.out.println("Novo nome: ");
 					String novoNome = sc.nextLine();
 					if (!novoNome.trim().isEmpty()) {
 						livroParaAlterar.setNome(novoNome);
+						System.out.println("Nome alterado.");
 					}
 					System.out.println("Novo autor");
 					String novoAutor = sc.nextLine();
 					if (!novoAutor.trim().isEmpty()) {
 						livroParaAlterar.setAutor(novoAutor);
+						System.out.println("Autor alterado.");
+					
 					}
 					break;
 				} catch (IDInvalido e) {

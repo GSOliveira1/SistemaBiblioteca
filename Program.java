@@ -23,10 +23,10 @@ public class Program {
 					MenuEstudante.menuEstudantes(sc, bd);
 					break;
 				case 2:
-					//menuLivros(sc, bd);
+					MenuLivro.menuLivros(sc, bd);
 					break;
 				case 3:
-					//menuAlugueis(sc, bd);
+					MenuAluguel.menuAluguel(sc, bd);
 					break;
 				case 4:
 					System.out.println("Encerrando o programa.");

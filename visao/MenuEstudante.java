@@ -56,12 +56,14 @@ public class MenuEstudante {
 					String novoNome = sc.nextLine();
 					if (!novoNome.trim().isEmpty()) {
 						estudanteParaAlterar.setNome(novoNome);
+						System.out.println("Nome alterado.");
 					}
 					System.out.println("Matricula: ");
 					int novaMatricula = sc.nextInt();
 					if (novaMatricula != estudanteParaAlterar.getMatricula()) {
 						estudanteParaAlterar.setMatricula(novaMatricula);
 						estudanteParaAlterar.setId(novaMatricula);
+						System.out.println("Matricula alterada.");
 					}
 					break;	
 				} catch(IDInvalido e) {
