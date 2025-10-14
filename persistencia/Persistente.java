@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 import modelo.Entidade;
 
-public class Persistente {
-	private ArrayList<Entidade> entidades;
+public class Persistente <T extends Entidade> {
+	private ArrayList<T> entidades;
 	
 	public Persistente() {
-		entidades = new ArrayList<>();
+		entidades = new ArrayList<T>();
 	}
 	
-	public void adicionar(Entidade e) {
+	public void adicionar(T e) {
 		this.entidades.add(e);
 	}
 	
 	public void remover(int id)  throws IDInvalido {
-		Entidade aux = buscarPorID(id);
+		T aux = buscarPorID(id);
 		int indiceRemocao = entidades.indexOf(aux);
 		if (indiceRemocao == -1) {	// Entity not found.
 			return;
@@ -24,11 +24,11 @@ public class Persistente {
 		entidades.remove(indiceRemocao);
 	}
 	
-	public void alterar(int id, Entidade e) throws IDInvalido {
+	public void alterar(int id, T e) throws IDInvalido {
 		int idParaAlterar = e.getId();
 		
 		for (int i = 0; i < entidades.size(); i++) {
-			Entidade aux = entidades.get(i);
+			T aux = entidades.get(i);
 			if (idParaAlterar == aux.getId()) {
 				entidades.set(i, e);
 			}
@@ -36,9 +36,9 @@ public class Persistente {
 		
 	}
 	
-	public Entidade buscarPorID(int id) throws IDInvalido {
+	public T buscarPorID(int id) throws IDInvalido {
 		for (int i = 0; i < entidades.size(); i++) {
-			Entidade aux = entidades.get(i);
+			T aux = entidades.get(i);
 			if (aux.getId() == id) {
 				return aux;
 			}
