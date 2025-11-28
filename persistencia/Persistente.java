@@ -11,6 +11,9 @@ public class Persistente <T extends Entidade> {
 		entidades = new ArrayList<T>();
 	}
 	
+	public ArrayList<T> listar() {
+		return new ArrayList<T>(entidades);
+	}
 	public void adicionar(T e) {
 		this.entidades.add(e);
 	}
