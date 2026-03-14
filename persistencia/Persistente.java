@@ -18,7 +18,7 @@ public class Persistente <T extends Entidade> {
 	public void remover(int id)  throws IDInvalido {
 		T aux = buscarPorID(id);
 		int indiceRemocao = entidades.indexOf(aux);
-		if (indiceRemocao == -1) {	// Entity not found.
+		if (indiceRemocao == -1) {	// Entidade não encontrada.
 			return;
 		}
 		entidades.remove(indiceRemocao);
