@@ -34,17 +34,6 @@ O projeto foi desenvolvido com o objetivo de consolidar conhecimentos em:
 
 ---
 
-## 📂 Estrutura do Projeto
-SistemaLivraria/
-│
-├── src/
-│ ├── modelo/
-│ ├── persistencia/
-│ ├── visao/
-│ └── Program
-│
-├── README.md
-
 ## 💻 Como Executar o Projeto
 
 ### 🔧 Pré-requisitos
