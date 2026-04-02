@@ -69,7 +69,7 @@ git clone git@github.com:GSOliveira1/SistemaBiblioteca.git
 ```bash
 javac src/**/*.java
 ```
-Execute a aplicação:
+- Execute a aplicação:
 ```bash
 java src.Program
 ```
