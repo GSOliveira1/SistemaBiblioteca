@@ -1,4 +1,4 @@
-package modelo;
+package src.main.java.modelo;
 
 public abstract class Entidade {
 	protected int id;

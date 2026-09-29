@@ -1,7 +1,9 @@
+package src.main.java;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import persistencia.BancoDeDados;
-import visao.*;
+
+import src.main.java.persistencia.BancoDeDados;
+import src.main.java.visao.*;
 
 public class Program {
 

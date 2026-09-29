@@ -1,15 +1,15 @@
-package visao;
+package src.main.java.visao;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import modelo.Aluguel;
-import modelo.Estudante;
-import modelo.ItemAluguel;
-import modelo.Livro;
-import persistencia.BancoDeDados;
-import persistencia.IDInvalido;
+import src.main.java.modelo.Aluguel;
+import src.main.java.modelo.Estudante;
+import src.main.java.modelo.ItemAluguel;
+import src.main.java.modelo.Livro;
+import src.main.java.persistencia.BancoDeDados;
+import src.main.java.persistencia.IDInvalido;
 
 public class MenuAluguel {
 	
