@@ -1,8 +1,8 @@
-package src.main.java.persistencia;
+package persistencia;
 
 import java.util.ArrayList;
 
-import src.main.java.modelo.Entidade;
+import modelo.Entidade;
 
 public class Persistente <T extends Entidade> {
 	private ArrayList<T> entidades;

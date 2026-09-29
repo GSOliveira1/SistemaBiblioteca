@@ -1,10 +1,10 @@
-package src.main.java.visao;
+package visao;
 
 import java.util.Scanner;
 
-import src.main.java.modelo.Estudante;
-import src.main.java.persistencia.BancoDeDados;
-import src.main.java.persistencia.IDInvalido;
+import modelo.Estudante;
+import persistencia.BancoDeDados;
+import persistencia.IDInvalido;
 
 
 public class MenuEstudante {

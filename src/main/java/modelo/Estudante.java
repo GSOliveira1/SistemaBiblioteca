@@ -1,4 +1,4 @@
-package src.main.java.modelo;
+package modelo;
 
 
 public class Estudante extends Entidade {

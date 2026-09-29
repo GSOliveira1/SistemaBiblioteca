@@ -1,8 +1,8 @@
-package src.main.java.persistencia;
+package persistencia;
 
-import src.main.java.modelo.Aluguel;
-import src.main.java.modelo.Estudante;
-import src.main.java.modelo.Livro;
+import modelo.Aluguel;
+import modelo.Estudante;
+import modelo.Livro;
 
 public class BancoDeDados {
 	
