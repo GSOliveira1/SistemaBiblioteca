@@ -1,14 +1,19 @@
 package modelo;
 
 
-public class Estudante extends Entidade {
+public class Estudante{
 	private String nome;
 	private int matricula;
+	private int periodo;
 	
-	public Estudante(String nome, int matricula) {
-		super(matricula);
+	public Estudante(){
+
+	}
+
+	public Estudante(String nome, int matricula, int periodo) {
 		this.nome = nome;
 		this.matricula = matricula;
+		this.periodo = periodo;
 	}
 
 	public String getNome() {
@@ -27,12 +32,19 @@ public class Estudante extends Entidade {
 		this.matricula = matricula;
 	}
 
+	public int getPeriodo(){
+		return periodo;
+	}
+
+	public void setPeriodo(int periodo){
+		this.periodo = periodo;
+	}
+
 	@Override
 	public String toString() {
 		return "Estudante [nome=" + nome + 
 				", matricula=" + matricula +  
-				", id=" + id + "]";
+				", periodo=" + periodo + "]";
 	}
-	
 	
 }

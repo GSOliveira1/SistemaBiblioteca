@@ -1,13 +1,26 @@
 package modelo;
 
-public class Livro extends Entidade {
+public class Livro{
+	private int id;
 	private String nome;
 	private String autor;
+
+	public Livro(){
+
+	}
 	
-	public Livro(String nome, String autor, int id) {
-		super(id);
+	public Livro(int id, String nome, String autor) {
+		this.id = id;
 		this.nome = nome;
 		this.autor = autor;
+	}
+
+	public int getId(){
+		return id;
+	}
+
+	public void setId(int id){
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -28,7 +41,6 @@ public class Livro extends Entidade {
 	
 	@Override
 	public String toString() {
-		return "Nome: " + this.nome + ", Autor: " + this.autor + 
-				super.toString();
+		return "ID: " + this.id + "Nome: " + this.nome + ", Autor: " + this.autor;
 	}
 }
