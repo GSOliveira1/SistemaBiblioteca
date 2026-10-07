@@ -50,14 +50,25 @@ public class BookDatabase implements BookRepository {
 
     @Override
     public List<Livro> listarTodos() {
-        // TODO Auto-generated method stub
-        return null;
+        String sql = "SELECT idLivro, nome, autor FROM LIVRO";
+        List<Livro> listaLivros = new ArrayList<>();
+
+        try(Connection conn = ConnectionFactory.geConnection();
+            PreparedStatement ps = conn.prepareStatement(sql)){
+                try(ResultSet rs = ps.executeQuery()){
+                    while (rs.next()){
+                        listaLivros.add(mapear(rs));
+                    }
+                }
+            } catch (SQLException e){
+                throw new RuntimeException("Erro ao listar todos os livros", e);
+            }
+        return listaLivros;
     }
 
     @Override
     public void atualizar(Livro l) {
         // TODO Auto-generated method stub
-        
     }
 
     @Override

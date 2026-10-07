@@ -3,17 +3,22 @@ package modelo;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Aluguel extends Entidade {
+public class Aluguel {
+	private int id;
 	private LocalDate dataAluguel;
 	private Estudante estudante;
 	private ArrayList<ItemAluguel> itens;
 	
 	
 	public Aluguel(int id, Estudante estudante, ArrayList<ItemAluguel> itens) {
-		super(id);
+		this.id = id;
 		this.dataAluguel = LocalDate.now();
 		this.estudante = estudante;
 		this.itens = itens;
+	}
+
+	public int getId(){
+		return this.id;
 	}
 
 	public LocalDate getDataAluguel() {
